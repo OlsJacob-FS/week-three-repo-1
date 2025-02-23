@@ -4,6 +4,7 @@ const http = require("http");
 const hostname = "127.0.0.1";
 const port = 3000;
 
+const API_KEY = "ffrsafeqFRWQGRTEQFDE-43215432fdewgte";
 const fs = require("fs");
 let directory_name = "./";
 let filenames = fs.readdirSync(directory_name);
@@ -23,7 +24,8 @@ const server = http.createServer((req, res) => {
       <body>
         <h1>Directory Contents:</h1>
         ${fileList}
-        <h2>${process.env.MY_SECRET}</h2>
+        <h1>Api key:</h1>
+        <h2>${API_KEY}</h2>
       </body>
     </html>
   `);
